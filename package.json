@@ -1,7 +1,7 @@
 {
-  "name": "react-node-template",
+  "name": "react-node-mongo-template",
   "version": "0.0.1",
-  "description": "Basic Template for a React and Node project",
+  "description": "Basic Template for a React and Node project with Mongo DB",
   "main": "webpack/servers/server.hot",
   "scripts": {
     "start": "babel-node .",
