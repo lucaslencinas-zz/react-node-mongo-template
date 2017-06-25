@@ -1,0 +1,38 @@
+// Import Dependencies
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const rootEl = document.getElementById('root');
+
+let render = () => {
+  // eslint-disable-next-line global-require
+  const App = require('./App').default;
+  ReactDOM.render(<App />, rootEl);
+};
+
+if (module.hot) {
+  // Support hot reloading of components
+  // and display an overlay for runtime errors
+  const renderApp = render;
+  const renderError = (error) => {
+    // eslint-disable-next-line global-require
+    const RedBox = require('redbox-react');
+    ReactDOM.render(<RedBox error={error} />, rootEl);
+  };
+
+  render = () => {
+    try {
+      renderApp();
+    } catch (error) {
+      console.log(error);
+      renderError(error);
+    }
+  };
+
+  // Enable Webpack hot module replacement for App
+  module.hot.accept('./App', () => {
+    setTimeout(render);
+  });
+}
+
+render();

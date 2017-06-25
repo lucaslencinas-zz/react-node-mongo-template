@@ -1,0 +1,50 @@
+:local {
+  .gameDescription {
+    margin: 5px;
+    height: 100%;
+
+    h3 {
+      span {
+        margin: 0 10px;
+        font-size: 12px;
+        font-style: italic;
+        cursor: pointer;
+
+        &:hover {
+          color: #1DB954;
+        }
+      }
+    }
+
+    .fields {
+      display: flex;
+      flex-direction: column;
+
+      .fieldset {
+        margin: 5px;
+        display: inline-flex;
+
+        div:nth-child(1) {
+          display: flex;
+          font-weight: bold;
+          color: #1DB954;
+          width: 20%;
+          justify-content: flex-end;
+          padding-right: 5px;
+        }
+
+        div:nth-child(2) {
+          width: 80%;
+          font-style: italic;
+        }
+      }
+    }
+
+    .emptyContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+}

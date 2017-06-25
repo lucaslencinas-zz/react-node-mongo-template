@@ -1,0 +1,14 @@
+:local {
+  .createGame {
+    .createGameButton {
+      font-style: italic;
+      font-size: 14px;
+      padding: 10px 5px;
+
+      &:hover {
+        color: #1DA954;
+        cursor: pointer;
+      }
+    }
+  }
+}

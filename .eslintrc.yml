@@ -1,0 +1,72 @@
+extends: airbnb
+
+env:
+  node:   true
+  es6:    true
+  mocha:  true
+
+parser: "babel-eslint"
+
+parserOptions:
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+
+settings:
+  import/resolver:
+    webpack:
+      config: "webpack/configs/config.hot.js"
+
+plugins:
+  - mocha
+
+rules:
+  prefer-arrow-callback:
+    - 0
+  import/no-unresolved:
+    - 2
+    - ignore:
+      - "^~"
+      - "^@"
+  import/extensions:
+    - 0
+  import/no-extraneous-dependencies:
+    - 0
+  import/prefer-default-export:
+    - 0
+  react/jsx-filename-extension:
+    - 0
+  react/forbid-prop-types:
+    - 0
+  react/require-default-props:
+    - 0
+  jsx-a11y/no-static-element-interactions:
+    - 0
+  mocha/no-exclusive-tests:
+    - error
+  arrow-parens:
+    - 2
+    - always
+  no-multiple-empty-lines:
+    - 2
+    - max: 1
+      maxEOF: 0
+  no-use-before-define: off
+  comma-dangle:
+    - error
+    - never
+  quote-props:
+    - error
+    - as-needed
+  max-len:
+    - 2
+    - code: 150
+
+globals:
+  expect: true
+  sandbox: true
+  sinon: true
+  should: true
+  window: true
+  document: true
+  fetch: true
+  Response: true

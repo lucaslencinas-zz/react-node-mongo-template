@@ -1,0 +1,13 @@
+node_modules
+coverage
+build
+.DS_Store
+.env
+npm-debug.log
+.vscode
+.eslintignore
+dist
+
+# Coverage directory used by tools like istanbul
+coverage
+.nyc_output

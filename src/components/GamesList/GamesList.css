@@ -1,0 +1,6 @@
+:local {
+  .gamesList {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,45 @@
+:local {
+
+  .game {
+    display: flex;
+    margin: 5px;
+    background: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: space-between;
+
+    div:first-child {
+      padding: 10px 0 10px 10px;
+      display: inline-flex;
+    }
+
+    div:last-child {
+      padding: 10px 10px 10px 0;
+      display: inline-flex;
+    }
+
+    &:hover {
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      transition: all 0.1s ease-in-out;
+      transform: translate(-2px,-2px);
+      background: #fcfcfc;
+    }
+
+    .gameName {
+      flex-grow: 1;
+    }
+
+    .deleteGame {
+      font-weight: bold;
+      margin: 0 5px 0 0;
+
+      &:hover {
+        color: #1DB954;
+      }
+    }
+  }
+
+  .selected {
+    border: #1DB954 1px solid;
+  }
+}
