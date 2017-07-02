@@ -11,7 +11,7 @@ const GameDescription = ({
       <h3>{game.name}<span onClick={onOpenEditGameForm}>Edit</span></h3>
       <div data-test-id="fields" className={styles.fields}>
         <div data-test-id="fields-description" className={styles.fieldset}>
-          <div>Description: </div>
+          <div>Some description: </div>
           <div>{game.description}</div>
         </div>
         <div data-test-id="fields-link" className={styles.fieldset}>
